@@ -6,7 +6,80 @@
       <title>Your Name Here</title>
   
   </head>
-  <body>
-  
-  </body>
+  <style>
+    :root {
+      --base-weight: 400;
+      --hover-weight: 700;
+      --click-rotate: 15deg;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      height: 100vh;
+      background: #fefefe;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .name {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+    }
+
+    .letter {
+      font-variation-settings: 'wght' var(--base-weight);
+      transition: all 0.3s ease;
+      font-size: 16vw;
+      padding: 0 0.1em;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .letter:hover {
+      font-variation-settings: 'wght' var(--hover-weight);
+      color: #222;
+      transform: scale(1.1);
+    }
+
+    .letter:active {
+      transform: rotate(var(--click-rotate)) scale(1.05);
+      color: hotpink;
+    }
+
+    @media (max-width: 900px) {
+      .letter {
+        font-size: 18vw;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .letter {
+        font-size: 20vw;
+      }
+    }
+
+    @media (max-width: 450px) {
+      .letter {
+        font-size: 22vw;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="name">
+    <span class="letter">S</span>
+    <span class="letter">E</span>
+    <span class="letter">R</span>
+    <span class="letter">E</span>
+    <span class="letter">N</span>
+    <span class="letter">A</span>
+  </div>
+</body>
   </html>
